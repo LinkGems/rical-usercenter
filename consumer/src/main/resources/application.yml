@@ -1,0 +1,30 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: sprica-dubbo-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 103.45.105.132:8848
+dubbo:
+  application:
+    # 应用名称
+    name: sprica-dubbo-consumer
+    id: sprica-dubbo-consumer
+  registry:
+    # 注册中心地址
+    address: nacos://103.45.105.132:8848/
+  protocol:
+    # 传输协议
+    name: dubbo
+    # ip不可为127.0.0.1
+#    host: 127.0.0.1
+    # 随机端口
+    port: -1
+
+
+wt-service:
+  sprica-dubbo-provider:
+    version: 1.0

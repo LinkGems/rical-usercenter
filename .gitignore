@@ -1,0 +1,15 @@
+.idea
+.DS_Store
+*/.DS_Store
+*.iml
+*.class
+target/
+
+/service/target/*
+/provider/target/*
+/domain/target/*
+/common/target/*
+/biz/target/*
+/task/target/*
+/export/target/*
+/api/target/*

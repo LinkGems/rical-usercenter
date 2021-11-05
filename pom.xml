@@ -23,7 +23,7 @@
         <spring-boot.version>2.1.13.RELEASE</spring-boot.version>
 
         <project.version>1.0.0-SNAPSHOT</project.version>
-        <sprica-common.version>1.0.0-SNAPSHOT</sprica-common.version>
+        <rical-common.version>1.0.0-SNAPSHOT</rical-common.version>
     </properties>
 
     <dependencyManagement>
@@ -60,8 +60,8 @@
 
         <dependency>
             <groupId>com.wtrue</groupId>
-            <artifactId>sprica.common</artifactId>
-            <version>${sprica-common.version}</version>
+            <artifactId>rical.common</artifactId>
+            <version>${rical-common.version}</version>
         </dependency>
 
     </dependencies>

@@ -23,14 +23,14 @@
     </distributionManagement>
 
     <properties>
-        <sprica-common.version>1.0.0-SNAPSHOT</sprica-common.version>
+        <rical-common.version>1.0.0-SNAPSHOT</rical-common.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.wtrue</groupId>
-            <artifactId>sprica.common</artifactId>
-            <version>${sprica-common.version}</version>
+            <artifactId>rical.common</artifactId>
+            <version>${rical-common.version}</version>
         </dependency>
     </dependencies>
 </project>

@@ -1,6 +1,6 @@
-package com.wtrue.sprica.dubbo.consumer;
+package com.wtrue.rical.backend.consumer;
 
-import com.wtrue.sprica.dubbo.export.ITestProvider;
+import com.wtrue.rical.backend.export.ITestProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

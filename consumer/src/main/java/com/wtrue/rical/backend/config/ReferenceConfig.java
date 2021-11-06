@@ -1,6 +1,6 @@
-package com.wtrue.sprica.dubbo.config;
+package com.wtrue.rical.backend.config;
 
-import com.wtrue.sprica.dubbo.export.ITestProvider;
+import com.wtrue.rical.backend.export.ITestProvider;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,6 +12,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ReferenceConfig {
 
-    @Reference(version = "${wt-service.sprica-dubbo-provider.version}")
+    @Reference(version = "${wtrue.rical.backend}")
     public ITestProvider testProvider;
 }

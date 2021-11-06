@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>sprica.model-dubbo</artifactId>
+        <artifactId>rical.backend</artifactId>
         <groupId>com.wtrue</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -34,7 +34,7 @@
 
         <dependency>
             <groupId>com.wtrue</groupId>
-            <artifactId>sprica.model-dubbo.export</artifactId>
+            <artifactId>rical.backend.export</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 

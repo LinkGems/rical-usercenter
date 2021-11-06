@@ -1,6 +1,6 @@
-package com.wtrue.sprica.dubbo.provider;
+package com.wtrue.rical.backend.provider;
 
-import com.wtrue.sprica.dubbo.export.ITestProvider;
+import com.wtrue.rical.backend.export.ITestProvider;
 import org.apache.dubbo.config.annotation.Service;
 
 /**
@@ -8,7 +8,7 @@ import org.apache.dubbo.config.annotation.Service;
  * @author: meidanlong
  * @date: 2021/7/18 4:51 PM
  */
-@Service(version = "${wt-service.sprica-dubbo-provider.version}")
+@Service(version = "${wtrue.rical.backend}")
 public class TestProviderImpl implements ITestProvider {
     @Override
     public String add(int num) {

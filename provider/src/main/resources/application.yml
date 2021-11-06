@@ -3,28 +3,12 @@ server:
 
 spring:
   application:
-    name: sprica-dubbo-provider
+    name: rical-backend-provider
   cloud:
     nacos:
       discovery:
         server-addr: 103.45.105.132:8848
-dubbo:
-  application:
-    # 应用名称
-    name: sprica-dubbo-provider
-    id: sprica-dubbo-provider
-  registry:
-    # 注册中心地址
-    address: nacos://103.45.105.132:8848/
-  protocol:
-    # 传输协议
-    name: dubbo
-    # ip不可为127.0.0.1
-#    host: 192.168.3.135
-    # 随机端口
-    port: -1
-
-
-wt-service:
-  sprica-dubbo-provider:
-    version: 1.0
+  profiles:
+    include:
+      - dubbo
+      - provider

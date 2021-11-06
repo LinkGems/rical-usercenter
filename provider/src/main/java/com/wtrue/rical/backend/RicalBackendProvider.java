@@ -11,8 +11,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @EnableDubbo
-public class RicalBackendProviderApp {
+public class RicalBackendProvider {
     public static void main(String[] args) {
-        SpringApplication.run(RicalBackendProviderApp.class);
+        SpringApplication.run(RicalBackendProvider.class);
     }
 }

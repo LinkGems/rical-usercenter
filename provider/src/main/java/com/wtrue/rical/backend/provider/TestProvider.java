@@ -9,7 +9,7 @@ import org.apache.dubbo.config.annotation.Service;
  * @date: 2021/7/18 4:51 PM
  */
 @Service(version = "${wtrue.rical.backend}")
-public class TestProviderImpl implements ITestProvider {
+public class TestProvider implements ITestProvider {
     @Override
     public String add(int num) {
         return num + "!";

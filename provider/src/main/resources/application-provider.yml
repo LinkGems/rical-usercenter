@@ -1,3 +1,4 @@
 wtrue:
   rical:
-    backend: latest
+    backend:
+      ITestProvider: latest

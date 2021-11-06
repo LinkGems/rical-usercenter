@@ -12,6 +12,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ReferenceConfig {
 
-    @Reference(version = "${wtrue.rical.backend}")
+    @Reference(version = "${wtrue.rical.backend.ITestProvider}")
     public ITestProvider testProvider;
 }

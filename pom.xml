@@ -11,6 +11,7 @@
         <module>provider</module>
         <module>export</module>
         <module>consumer</module>
+        <module>task</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -24,6 +25,7 @@
 
         <project.version>1.0.0-SNAPSHOT</project.version>
         <sprica-common.version>1.0.0-SNAPSHOT</sprica-common.version>
+        <job-center.export.version>1.0.0-SNAPSHOT</job-center.export.version>
     </properties>
 
     <dependencyManagement>
@@ -51,6 +53,12 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wtrue</groupId>
+                <artifactId>job-center.export</artifactId>
+                <version>${job-center.export.version}</version>
             </dependency>
 
         </dependencies>

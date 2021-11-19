@@ -1,4 +1,4 @@
-package com.wtrue.sprica.dubbo;
+package com.wtrue.rical.backend;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
@@ -11,8 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @EnableDubbo
-public class ProviderApp {
+public class RicalBackendConsumer {
+
     public static void main(String[] args) {
-        SpringApplication.run(ProviderApp.class);
+        SpringApplication.run(RicalBackendConsumer.class);
     }
 }

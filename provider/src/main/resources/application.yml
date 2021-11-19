@@ -3,48 +3,14 @@ server:
 
 spring:
   application:
-    name: sprica-dubbo-provider
+    name: rical-backend-provider
   cloud:
     nacos:
       discovery:
         server-addr: 103.45.105.132:8848
-dubbo:
-  application:
-    # 应用名称
-    name: sprica-dubbo-provider
-    id: sprica-dubbo-provider
-  registry:
-    # 注册中心地址
-    address: nacos://103.45.105.132:8848/
-  protocol:
-    # 传输协议
-    name: dubbo
-    # ip不可为127.0.0.1
-    host: 172.19.160.212
-    # 随机端口
-    port: -1
+  profiles:
+    include:
+      - dubbo
+      - provider
+      - job
 
-
-wt-service:
-  sprica-dubbo-provider:
-    version: 1.0
-
-xxl:
-  job:
-    accessToken: accessToken
-    i18n: zh_CN
-    logretentiondays: 30
-    triggerpool:
-      fast:
-        max: 200
-      slow:
-        max: 100
-    admin:
-      addresses: http://127.0.0.1:8080/xxl-job-admin
-    executor:
-      address:
-      appname: wtrue-job-center
-      ip:
-      logpath: /data/applogs/xxl-job/jobhandler
-      logretentiondays: 30
-      port: 9999

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wtrue</groupId>
-    <artifactId>sprica.model-dubbo</artifactId>
+    <artifactId>rical.backend</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>provider</module>
@@ -24,7 +24,8 @@
         <spring-boot.version>2.1.13.RELEASE</spring-boot.version>
 
         <project.version>1.0.0-SNAPSHOT</project.version>
-        <sprica-common.version>1.0.0-SNAPSHOT</sprica-common.version>
+        <rical-common.version>1.0.0-SNAPSHOT</rical-common.version>
+        <rical.backend.export.version>1.0.0-SNAPSHOT</rical.backend.export.version>
         <job-center.export.version>1.0.0-SNAPSHOT</job-center.export.version>
     </properties>
 
@@ -57,6 +58,18 @@
 
             <dependency>
                 <groupId>com.wtrue</groupId>
+                <artifactId>rical.backend.export</artifactId>
+                <version>${rical.backend.export.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wtrue</groupId>
+                <artifactId>task</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wtrue</groupId>
                 <artifactId>job-center.export</artifactId>
                 <version>${job-center.export.version}</version>
             </dependency>
@@ -68,8 +81,8 @@
 
         <dependency>
             <groupId>com.wtrue</groupId>
-            <artifactId>sprica.common</artifactId>
-            <version>${sprica-common.version}</version>
+            <artifactId>rical.common</artifactId>
+            <version>${rical-common.version}</version>
         </dependency>
 
     </dependencies>

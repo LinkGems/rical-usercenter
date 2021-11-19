@@ -1,4 +1,4 @@
-package com.wtrue.rical.dubbo.task.config;
+package com.wtrue.rical.backend.task.config;
 
 import com.wtrue.jobcenter.export.job.executor.impl.XxlJobSpringExecutor;
 import org.slf4j.Logger;

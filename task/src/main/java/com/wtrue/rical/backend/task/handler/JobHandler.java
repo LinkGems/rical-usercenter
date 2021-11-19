@@ -1,4 +1,4 @@
-package com.wtrue.rical.dubbo.task.handler;
+package com.wtrue.rical.backend.task.handler;
 
 import com.wtrue.jobcenter.export.job.context.XxlJobHelper;
 import com.wtrue.jobcenter.export.job.handler.IJobHandler;
@@ -14,8 +14,8 @@ import org.springframework.stereotype.Component;
 public class JobHandler extends IJobHandler {
 
     @Override
-    @XxlJob(value = "helloWtrueJobHandler")
+    @XxlJob(value = "backendJobHandler")
     public void execute() throws Exception {
-        XxlJobHelper.log("hello WTrue");
+        XxlJobHelper.log("hello WTrue BE");
     }
 }

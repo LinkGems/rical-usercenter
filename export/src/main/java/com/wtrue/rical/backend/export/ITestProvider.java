@@ -1,4 +1,4 @@
-package com.wtrue.sprica.dubbo.export;
+package com.wtrue.rical.backend.export;
 
 /**
  * @description:

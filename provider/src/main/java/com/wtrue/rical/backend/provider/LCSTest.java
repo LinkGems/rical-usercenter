@@ -1,4 +1,4 @@
-package com.wtrue.sprica.dubbo.provider;
+package com.wtrue.rical.backend.provider;
 
 import java.util.ArrayList;
 import java.util.Collections;

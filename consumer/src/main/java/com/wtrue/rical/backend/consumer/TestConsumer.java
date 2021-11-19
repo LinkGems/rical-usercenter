@@ -1,9 +1,9 @@
-package com.wtrue.sprica.dubbo.consumer;
+package com.wtrue.rical.backend.consumer;
 
-import com.wtrue.sprica.dubbo.export.ITestProvider;
-import org.apache.dubbo.config.annotation.Reference;
+import com.wtrue.rical.backend.export.ITestProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @author: meidanlong
  * @date: 2021/7/18 5:04 PM
  */
-@RestController("test")
+@RestController
+@RequestMapping("/test/")
 public class TestConsumer {
 
-    @Reference(version = "${wt-service.sprica-dubbo-provider.version}")
+    @Autowired
     private ITestProvider testProvider;
 
     @GetMapping("add")

@@ -1,4 +1,4 @@
-package com.wtrue.sprica.dubbo.provider;
+package com.wtrue.rical.backend.provider;
 
 import com.aliasi.sentences.IndoEuropeanSentenceModel;
 import com.aliasi.sentences.SentenceModel;

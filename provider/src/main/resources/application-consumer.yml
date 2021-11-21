@@ -1,0 +1,3 @@
+wtrue:
+  job-center:
+    IJobService: latest

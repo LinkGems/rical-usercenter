@@ -1,49 +1,43 @@
 package com.wtrue.rical.backend.task.config;
 
 import com.wtrue.jobcenter.export.job.executor.impl.XxlJobSpringExecutor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.wtrue.jobcenter.export.remote.IJobService;
+import com.wtrue.rical.common.utils.HttpUtil;
+import com.wtrue.rical.common.utils.StringUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @description:
  * @author: meidanlong
  * @date: 2021/11/18 10:22 PM
  */
+@Slf4j
 @Configuration
 public class XxlJobConfig {
-    private Logger logger = LoggerFactory.getLogger(XxlJobConfig.class);
-
-    @Value("${xxl.job.admin.addresses}")
-    private String adminAddresses;
 
     @Value("${dubbo.application.id}")
     private String appName;
-
-    @Value("${xxl.job.executor.address}")
+    private static String accessToken;
     private String address;
-
-    @Value("${xxl.job.executor.ip}")
     private String ip;
+    private final static String adminAddresses = "http://103.45.105.132:8080/xxl-job-admin";
+    private final static int port = 9999;
+    private final static String logPath = "/data/applogs/xxl-job/jobhandler";
+    private final static int logRetentionDays = 30;
 
-    @Value("${xxl.job.executor.port}")
-    private int port;
-
-    @Value("${xxl.job.accessToken}")
-    private String accessToken;
-
-    @Value("${xxl.job.executor.logpath}")
-    private String logPath;
-
-    @Value("${xxl.job.executor.logretentiondays}")
-    private int logRetentionDays;
-
+    @Resource
+    private IJobService iJobService;
 
     @Bean
     public XxlJobSpringExecutor xxlJobExecutor() {
-        logger.info(">>>>>>>>>>> xxl-job config init.");
+        log.info(">>>>>>>>>>> xxl-job config init.");
         XxlJobSpringExecutor xxlJobSpringExecutor = new XxlJobSpringExecutor();
         xxlJobSpringExecutor.setAdminAddresses(adminAddresses);
         xxlJobSpringExecutor.setAppname(appName);
@@ -54,6 +48,28 @@ public class XxlJobConfig {
         xxlJobSpringExecutor.setLogPath(logPath);
         xxlJobSpringExecutor.setLogRetentionDays(logRetentionDays);
 
+        // 注册handler
+        iJobService.addJobGroupIfNx(appName);
+
         return xxlJobSpringExecutor;
+    }
+
+    /**
+     * 如果不存在的话，注册handler
+     */
+    private void registerHandlerIfNX(){
+        try{
+            Map<String, String> params = new HashMap<>();
+            params.put("appName", appName);
+            String resp = HttpUtil.doPost(adminAddresses + "/handler/register", params);
+            if(StringUtil.isNotEmpty(resp)){
+                log.info("registerHandlerIfNX success, appName is {}, resp is {}", appName, resp);
+            }else{
+                log.error("registerHandlerIfNX error, appName is {}, may cause current service is job-center", appName);
+            }
+        }catch (Exception e){
+            log.error("registerHandlerIfNX error, appName is {}, may cause current service is job-center", appName, e);
+        }
+
     }
 }

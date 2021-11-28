@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wtrue.rical.backend.dao.mapper.UserBaseMapper">
+  <resultMap id="BaseResultMap" type="com.wtrue.rical.backend.dao.po.UserBase">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="USER_ID" jdbcType="BIGINT" property="userId" />
+    <result column="ID_TYPE" jdbcType="TINYINT" property="idType" />
+    <result column="ID_NUM" jdbcType="VARCHAR" property="idNum" />
+    <result column="DELETED" jdbcType="TINYINT" property="deleted" />
+    <result column="CREATED_TIME" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="UPDATED_TIME" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+</mapper>

@@ -6,12 +6,16 @@
 
     <groupId>com.wtrue</groupId>
     <artifactId>rical.backend</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>provider</module>
         <module>export</module>
-        <module>consumer</module>
         <module>task</module>
+        <module>dao</module>
+        <module>domain</module>
+        <module>biz</module>
+        <module>service</module>
+        <module>common</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -27,6 +31,9 @@
         <rical-common.version>1.0.0-SNAPSHOT</rical-common.version>
         <rical.backend.export.version>1.0.0-SNAPSHOT</rical.backend.export.version>
         <job-center.export.version>1.0.0-SNAPSHOT</job-center.export.version>
+
+        <mysql.version>8.0.16</mysql.version>
+        <tk-mybatis.version>2.1.5</tk-mybatis.version>
     </properties>
 
     <dependencyManagement>
@@ -64,7 +71,37 @@
 
             <dependency>
                 <groupId>com.wtrue</groupId>
-                <artifactId>task</artifactId>
+                <artifactId>rical.backend.task</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wtrue</groupId>
+                <artifactId>rical.backend.biz</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wtrue</groupId>
+                <artifactId>rical.backend.service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wtrue</groupId>
+                <artifactId>rical.backend.domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wtrue</groupId>
+                <artifactId>rical.backend.dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wtrue</groupId>
+                <artifactId>rical.backend.common</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -72,6 +109,18 @@
                 <groupId>com.wtrue</groupId>
                 <artifactId>job-center.export</artifactId>
                 <version>${job-center.export.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${tk-mybatis.version}</version>
             </dependency>
 
         </dependencies>

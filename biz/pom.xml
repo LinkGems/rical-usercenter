@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rical.backend.task</artifactId>
+    <artifactId>rical.backend.biz</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -19,12 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.wtrue</groupId>
-            <artifactId>rical.backend.common</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.wtrue</groupId>
-            <artifactId>rical.backend.biz</artifactId>
+            <artifactId>rical.backend.service</artifactId>
         </dependency>
     </dependencies>
 

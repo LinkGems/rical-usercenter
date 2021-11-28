@@ -14,3 +14,15 @@ dubbo:
     host: 192.168.3.206
     # 随机端口
     port: -1
+
+
+provider:
+  wtrue:
+    rical:
+      backend:
+        ITestProvider: latest
+
+consumer:
+  wtrue:
+    job-center:
+      IJobService: latest

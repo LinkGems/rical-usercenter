@@ -39,12 +39,6 @@
             <artifactId>rical.backend.task</artifactId>
         </dependency>
 
-        <!--Lingpipe操作文章句子-->
-        <dependency>
-            <groupId>de.julielab</groupId>
-            <artifactId>aliasi-lingpipe</artifactId>
-            <version>4.1.0</version>
-        </dependency>
     </dependencies>
 
 </project>

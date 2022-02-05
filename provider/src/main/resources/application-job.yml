@@ -1,20 +1,10 @@
-
 xxl:
   job:
-    accessToken: accessToken
-    i18n: zh_CN
-    logretentiondays: 30
-    triggerpool:
-      fast:
-        max: 200
-      slow:
-        max: 100
     admin:
-      addresses: http://127.0.0.1:8080/xxl-job-admin
-    executor:
+      accessToken: accessToken
       address:
-      appname: wtrue-job-center
       ip:
-      logpath: /data/applogs/xxl-job/jobhandler
-      logretentiondays: 30
+      adminAddresses: http://localhost:8001/job-center-admin
       port: 9999
+      logPath: /home/app/applogs/job-center/jobhandler
+      logRetentionDays: 30

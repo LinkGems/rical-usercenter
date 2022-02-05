@@ -1,8 +1,8 @@
 package com.wtrue.rical.backend.task.handler;
 
-import com.wtrue.jobcenter.export.job.context.XxlJobHelper;
-import com.wtrue.jobcenter.export.job.handler.IJobHandler;
-import com.wtrue.jobcenter.export.job.handler.annotation.XxlJob;
+import com.xxl.job.core.context.XxlJobHelper;
+import com.xxl.job.core.handler.IJobHandler;
+import com.xxl.job.core.handler.annotation.XxlJob;
 import org.springframework.stereotype.Component;
 
 /**

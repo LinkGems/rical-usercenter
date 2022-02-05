@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.wtrue</groupId>
-            <artifactId>rical.backend.domain</artifactId>
+            <artifactId>rical.backend.common</artifactId>
         </dependency>
     </dependencies>
 

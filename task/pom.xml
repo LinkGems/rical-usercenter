@@ -19,11 +19,6 @@
     <dependencies>
         <dependency>
             <groupId>com.wtrue</groupId>
-            <artifactId>rical.backend.common</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.wtrue</groupId>
             <artifactId>rical.backend.biz</artifactId>
         </dependency>
     </dependencies>

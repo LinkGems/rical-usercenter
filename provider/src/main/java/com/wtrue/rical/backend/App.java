@@ -13,8 +13,8 @@ import tk.mybatis.spring.annotation.MapperScan;
 @MapperScan("com.wtrue.rical.backend.dao.mapper")
 @SpringBootApplication
 @EnableDubbo
-public class RicalBackendApp {
+public class App {
     public static void main(String[] args) {
-        SpringApplication.run(RicalBackendApp.class);
+        SpringApplication.run(App.class);
     }
 }

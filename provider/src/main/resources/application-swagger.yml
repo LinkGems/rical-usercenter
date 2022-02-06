@@ -1,4 +1,3 @@
-# Swagger
 swagger:
   title: Rical-Backend
   description: Rical-Backend后端服务文档，方便前端调用

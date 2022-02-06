@@ -1,4 +1,4 @@
-package com.wtrue.rical.backend.dao.po;
+package com.wtrue.rical.backend.dao.po.user;
 
 import java.util.Date;
 import javax.persistence.*;
@@ -9,23 +9,35 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Table(name = "USER_BASE")
+@Table(name = "user_base")
 public class UserBase {
     /**
-     * 用户ID
+     * 用户唯一ID 用户唯一ID
      */
     @Id
     @Column(name = "USER_ID")
     private Long userId;
 
     /**
-     * ID类型，1：身份证
+     * 用户名称 用户名称（姓名）
      */
-    @Column(name = "ID_TYPE")
-    private Byte idType;
+    @Column(name = "USER_NAME")
+    private String userName;
 
     /**
-     * 身份证号
+     * 用户性别 用户性别
+     */
+    @Column(name = "SEX")
+    private Integer sex;
+
+    /**
+     * 身份类型 1:身份证，2:护照
+     */
+    @Column(name = "ID_TYPE")
+    private Integer idType;
+
+    /**
+     * 证件号 用户身份证号
      */
     @Column(name = "ID_NUM")
     private String idNum;
@@ -34,7 +46,7 @@ public class UserBase {
      * 是否删除
      */
     @Column(name = "DELETED")
-    private Byte deleted;
+    private String deleted;
 
     /**
      * 创建时间

@@ -23,20 +23,22 @@
 
         <!--实体-->
         <javaModelGenerator targetPackage="com.wtrue.rical.backend.dao.po${moduleName}"
-                            targetProject="src/main/java"/>
+                            targetProject="../dao/src/main/java"/>
+<!--                            targetProject="../domain/src/main/java"/>-->
 
         <!--mapper.xml-->
-        <sqlMapGenerator targetPackage="mapper.${moduleName}"
-                         targetProject="src/main/resources"/>
+        <sqlMapGenerator targetPackage="mapper${moduleName}"
+                         targetProject="../dao/src/main/resources"/>
 
         <!--mapper接口-->
         <javaClientGenerator targetPackage="com.wtrue.rical.backend.dao.mapper${moduleName}"
-                             targetProject="src/main/java"
+                             targetProject="../dao/src/main/java"
                              type="XMLMAPPER"/>
 
         <!--为哪张表生成代码-->
         <table tableName="${tableName}">
-<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
         </table>
+
     </context>
 </generatorConfiguration>

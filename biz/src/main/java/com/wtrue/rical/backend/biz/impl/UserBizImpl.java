@@ -1,4 +1,4 @@
-package impl;
+package com.wtrue.rical.backend.biz.impl;
 
 import com.wtrue.rical.backend.biz.IUserBiz;
 import com.wtrue.rical.backend.domain.dto.UserBaseDTO;

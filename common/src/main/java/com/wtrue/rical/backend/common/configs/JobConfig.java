@@ -16,21 +16,21 @@ import org.springframework.context.annotation.Configuration;
 public class JobConfig {
 
     @Value("${dubbo.application.id}")
-    private static String appName;
-    @Value("${xxl.job.admin.accessToken}")
-    private static String accessToken;
-    @Value("${xxl.job.admin.address}")
-    private static String address;
-    @Value("${xxl.job.admin.ip}")
-    private static String ip;
-    @Value("${xxl.job.admin.adminAddresses}")
-    private static String adminAddresses;
-    @Value("${xxl.job.admin.port}")
-    private static int port;
-    @Value("${xxl.job.admin.logPath}")
-    private static String logPath;
-    @Value("${xxl.job.admin.logRetentionDays}")
-    private static int logRetentionDays;
+    private String appName;
+    @Value("${job.admin.accessToken}")
+    private String accessToken;
+    @Value("${job.admin.address}")
+    private String address;
+    @Value("${job.admin.ip}")
+    private String ip;
+    @Value("${job.admin.adminAddresses}")
+    private String adminAddresses;
+    @Value("${job.admin.port}")
+    private int port;
+    @Value("${job.admin.logPath}")
+    private String logPath;
+    @Value("${job.admin.logRetentionDays}")
+    private int logRetentionDays;
 
     @Bean
     public XxlJobSpringExecutor xxlJobExecutor() {

@@ -16,6 +16,7 @@ public class JobHandler extends IJobHandler {
     @Override
     @XxlJob(value = "backendJobHandler")
     public void execute() throws Exception {
+        String jobParam = XxlJobHelper.getJobParam();
         XxlJobHelper.log("hello WTrue BE");
     }
 }

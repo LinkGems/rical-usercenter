@@ -1,11 +1,9 @@
-xxl:
-  job:
-    admin:
-      accessToken: accessToken
-      address:
-      ip:
-#      adminAddresses: http://localhost:8001/job-center-admin
-      adminAddresses: http://localhost:8001/
-      port: 9999
-      logPath: /home/app/applogs/job-center/jobhandler
-      logRetentionDays: 30
+job:
+  admin:
+    accessToken: accessToken
+    address:
+    ip:
+    adminAddresses: http://localhost:9001
+    port: 9999
+    logPath: /home/app/applogs/job-center/jobhandler
+    logRetentionDays: 30

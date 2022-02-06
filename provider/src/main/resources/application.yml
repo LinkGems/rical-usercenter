@@ -18,3 +18,4 @@ spring:
     include:
       - dubbo
       - job
+      - swagger

@@ -1,5 +1,7 @@
 package com.wtrue.rical.backend.biz;
 
+import com.wtrue.jobcenter.export.pojo.JobAddModel;
+
 /**
  * @description:
  * @author: meidanlong
@@ -7,5 +9,5 @@ package com.wtrue.rical.backend.biz;
  */
 public interface IJobBiz {
 
-    Boolean addJob();
+    Boolean addJob(JobAddModel jobAddModel);
 }

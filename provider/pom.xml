@@ -64,7 +64,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.wtrue.jobcenter.App</mainClass>
+                    <mainClass>com.wtrue.rical.backend.App</mainClass>
                 </configuration>
                 <executions>
                     <execution>

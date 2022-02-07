@@ -1,6 +1,6 @@
 package com.wtrue.rical.backend.export.provider;
 
-import com.wtrue.rical.backend.export.vo.UserBaseVO;
+import com.wtrue.rical.backend.export.pojo.UserBaseModel;
 import com.wtrue.rical.common.domain.BaseResponse;
 
 /**
@@ -10,5 +10,5 @@ import com.wtrue.rical.common.domain.BaseResponse;
  */
 public interface IUserProvider {
 
-    BaseResponse<UserBaseVO> queryUser(Long userId);
+    BaseResponse<UserBaseModel> queryUser(Long userId);
 }

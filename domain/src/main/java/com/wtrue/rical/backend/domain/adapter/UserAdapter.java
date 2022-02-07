@@ -2,7 +2,7 @@ package com.wtrue.rical.backend.domain.adapter;
 
 import com.wtrue.rical.backend.dao.po.user.UserBase;
 import com.wtrue.rical.backend.domain.dto.UserBaseDTO;
-import com.wtrue.rical.backend.export.vo.UserBaseVO;
+import com.wtrue.rical.backend.export.pojo.UserBaseModel;
 
 /**
  * @description:
@@ -24,29 +24,29 @@ public class UserAdapter {
         return userBaseDTO;
     }
 
-    public static UserBaseDTO vo2dto(UserBaseVO userBaseVO) {
-        if (userBaseVO == null) {
+    public static UserBaseDTO mo2dto(UserBaseModel userBaseModel) {
+        if (userBaseModel == null) {
             return null;
         }
         UserBaseDTO userBaseDTO = new UserBaseDTO();
-        userBaseDTO.setUserId(userBaseVO.getUserId());
-        userBaseDTO.setUserName(userBaseVO.getUserName());
-        userBaseDTO.setSex(userBaseVO.getSex());
-        userBaseDTO.setIdType(userBaseVO.getIdType());
-        userBaseDTO.setIdNum(userBaseVO.getIdNum());
+        userBaseDTO.setUserId(userBaseModel.getUserId());
+        userBaseDTO.setUserName(userBaseModel.getUserName());
+        userBaseDTO.setSex(userBaseModel.getSex());
+        userBaseDTO.setIdType(userBaseModel.getIdType());
+        userBaseDTO.setIdNum(userBaseModel.getIdNum());
         return userBaseDTO;
     }
 
-    public static UserBaseVO dto2vo(UserBaseDTO userBaseDTO) {
+    public static UserBaseModel dto2mo(UserBaseDTO userBaseDTO) {
         if (userBaseDTO == null) {
             return null;
         }
-        UserBaseVO userBaseVO = new UserBaseVO();
-        userBaseVO.setUserId(userBaseDTO.getUserId());
-        userBaseVO.setUserName(userBaseDTO.getUserName());
-        userBaseVO.setSex(userBaseDTO.getSex());
-        userBaseVO.setIdType(userBaseDTO.getIdType());
-        userBaseVO.setIdNum(userBaseDTO.getIdNum());
-        return userBaseVO;
+        UserBaseModel userBaseModel = new UserBaseModel();
+        userBaseModel.setUserId(userBaseDTO.getUserId());
+        userBaseModel.setUserName(userBaseDTO.getUserName());
+        userBaseModel.setSex(userBaseDTO.getSex());
+        userBaseModel.setIdType(userBaseDTO.getIdType());
+        userBaseModel.setIdNum(userBaseDTO.getIdNum());
+        return userBaseModel;
     }
 }

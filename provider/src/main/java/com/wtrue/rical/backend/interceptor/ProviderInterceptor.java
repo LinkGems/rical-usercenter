@@ -9,6 +9,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @description:
@@ -16,6 +17,7 @@ import org.springframework.beans.factory.annotation.Value;
  * @date: 2022/1/21 2:13 PM
  */
 @Aspect
+@Configuration
 public class ProviderInterceptor {
 
     @Value("${dubbo.application.id}")

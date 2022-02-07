@@ -1,4 +1,4 @@
-package com.wtrue.rical.backend.export.vo;
+package com.wtrue.rical.backend.export.pojo;
 
 import com.wtrue.rical.common.domain.BaseObject;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class UserBaseVO extends BaseObject {
+public class UserBaseModel extends BaseObject {
 
     /**
      * 用户唯一ID 用户唯一ID

@@ -1,12 +1,9 @@
 package com.wtrue.rical.backend.biz.impl;
 
-import com.alibaba.fastjson.JSON;
-import com.wtrue.jobcenter.export.pojo.JobAddModel;
 import com.wtrue.jobcenter.export.remote.IJobProvider;
 import com.wtrue.rical.backend.biz.IJobBiz;
-import com.wtrue.rical.common.domain.BaseResponse;
-import com.wtrue.rical.common.domain.ThreadLocalData;
-import com.wtrue.rical.common.utils.ThreadLocalUtil;
+import com.wtrue.rical.backend.consumer.IJobConsumer;
+import com.wtrue.rical.backend.domain.dto.JobInfoDTO;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -20,11 +17,15 @@ import javax.annotation.Resource;
 public class JobBizImpl implements IJobBiz {
 
     @Resource
-    private IJobProvider iJobProvider;
+    private IJobConsumer jobConsumer;
 
     @Override
-    public Boolean addJob(JobAddModel jobAddModel) {
-        BaseResponse<Integer> response = iJobProvider.addJob(jobAddModel);
-        return response.isSuccess();
+    public Boolean addJob(JobInfoDTO jobInfoDTO) {
+        return jobConsumer.addJob(jobInfoDTO);
+    }
+
+    @Override
+    public JobInfoDTO queryJob(Integer jobId) {
+        return jobConsumer.queryJob(jobId);
     }
 }

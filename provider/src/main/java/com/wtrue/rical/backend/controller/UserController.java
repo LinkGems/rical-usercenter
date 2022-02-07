@@ -1,7 +1,7 @@
 package com.wtrue.rical.backend.controller;
 
 import com.wtrue.rical.backend.export.provider.IUserProvider;
-import com.wtrue.rical.backend.export.vo.UserBaseVO;
+import com.wtrue.rical.backend.export.pojo.UserBaseModel;
 import com.wtrue.rical.common.domain.BaseResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +22,7 @@ public class UserController {
     private IUserProvider userProvider;
 
     @GetMapping("query")
-    public BaseResponse<UserBaseVO> queryUser(Long userId){
+    public BaseResponse<UserBaseModel> queryUser(Long userId){
         return userProvider.queryUser(userId);
     }
 }

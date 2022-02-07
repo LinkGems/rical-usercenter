@@ -1,14 +1,13 @@
-package com.wtrue.rical.backend.biz;
+package com.wtrue.rical.backend.consumer;
 
-import com.wtrue.jobcenter.export.pojo.JobAddModel;
 import com.wtrue.rical.backend.domain.dto.JobInfoDTO;
 
 /**
  * @description:
  * @author: meidanlong
- * @date: 2022/2/5 12:25 PM
+ * @date: 2022/2/7 3:33 PM
  */
-public interface IJobBiz {
+public interface IJobConsumer {
 
     Boolean addJob(JobInfoDTO jobInfoDTO);
 

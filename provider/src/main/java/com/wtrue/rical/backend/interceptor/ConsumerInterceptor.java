@@ -1,6 +1,7 @@
 package com.wtrue.rical.backend.interceptor;
 
 import com.wtrue.rical.common.domain.ThreadLocalData;
+import com.wtrue.rical.common.utils.StringUtil;
 import com.wtrue.rical.common.utils.ThreadLocalUtil;
 import org.apache.dubbo.rpc.RpcContext;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -17,20 +18,23 @@ import org.springframework.context.annotation.Configuration;
  */
 @Aspect
 @Configuration
-public class ControllerInterceptor {
+public class ConsumerInterceptor {
 
     @Value("${dubbo.application.id}")
     private String appKey;
 
-    @Pointcut("execution(public * com.wtrue..*.controller.*.*(..))")
+    @Pointcut("execution(public * com.wtrue..*.consumer.*.*(..))")
     public void rpcMethod(){ }
 
     @Before("rpcMethod()")
     public void before(){
-        ThreadLocalData data = new ThreadLocalData();
-        RpcContext.getContext().setAttachment("appKey", appKey);
-        data.setAppKey(appKey);
-        ThreadLocalUtil.setTl(data);
+        String appKey = ThreadLocalUtil.getAppKey();
+        if(StringUtil.isEmpty(appKey)){
+            ThreadLocalData data = new ThreadLocalData();
+            RpcContext.getContext().setAttachment("appKey", this.appKey);
+            data.setAppKey(this.appKey);
+            ThreadLocalUtil.setTl(data);
+        }
     }
 
     @AfterReturning("rpcMethod()")

@@ -16,6 +16,7 @@
         <module>biz</module>
         <module>service</module>
         <module>common</module>
+        <module>consumer</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -28,7 +29,7 @@
         <spring-boot.version>2.1.13.RELEASE</spring-boot.version>
 
         <project.version>1.0.0-SNAPSHOT</project.version>
-        <rical-common.version>1.0.0-SNAPSHOT</rical-common.version>
+        <rical-common.version>1.0.2-SNAPSHOT</rical-common.version>
         <rical.backend.export.version>1.0.0-SNAPSHOT</rical.backend.export.version>
         <job-center.export.version>1.0.0-SNAPSHOT</job-center.export.version>
 
@@ -78,6 +79,12 @@
             <dependency>
                 <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.biz</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wtrue</groupId>
+                <artifactId>rical.backend.consumer</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

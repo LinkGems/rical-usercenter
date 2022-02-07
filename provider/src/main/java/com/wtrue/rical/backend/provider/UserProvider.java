@@ -3,7 +3,7 @@ package com.wtrue.rical.backend.provider;
 import com.wtrue.rical.backend.biz.IUserBiz;
 import com.wtrue.rical.backend.domain.adapter.UserAdapter;
 import com.wtrue.rical.backend.domain.dto.UserBaseDTO;
-import com.wtrue.rical.backend.export.vo.UserBaseVO;
+import com.wtrue.rical.backend.export.pojo.UserBaseModel;
 import com.wtrue.rical.backend.export.provider.IUserProvider;
 import com.wtrue.rical.common.domain.BaseResponse;
 import org.apache.dubbo.config.annotation.Service;
@@ -22,12 +22,12 @@ public class UserProvider implements IUserProvider {
     private IUserBiz userBiz;
 
     @Override
-    public BaseResponse<UserBaseVO> queryUser(Long userId) {
-        BaseResponse<UserBaseVO> response = new BaseResponse<>();
+    public BaseResponse<UserBaseModel> queryUser(Long userId) {
+        BaseResponse<UserBaseModel> response = new BaseResponse<>();
         UserBaseDTO userBaseDTO = userBiz.queryUser(userId);
-        UserBaseVO userBaseVO = UserAdapter.dto2vo(userBaseDTO);
-        if(userBaseVO != null){
-            response.setData(userBaseVO);
+        UserBaseModel userBaseModel = UserAdapter.dto2mo(userBaseDTO);
+        if(userBaseModel != null){
+            response.setData(userBaseModel);
         }else{
             response.setSuccess(false);
         }

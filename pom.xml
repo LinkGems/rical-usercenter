@@ -201,25 +201,6 @@
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
-            <id>staging</id>
-            <properties>
-                <profiles.active>staging</profiles.active>
-            </properties>
-            <build>
-                <resources>
-                    <resource>
-                        <directory>src/main/profiles/staging/</directory>
-                    </resource>
-                    <resource>
-                        <directory>src/main/resources/</directory>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
-        <profile>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
             <id>prod</id>
             <properties>
                 <profiles.active>prod</profiles.active>

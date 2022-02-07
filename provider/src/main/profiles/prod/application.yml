@@ -8,12 +8,16 @@ spring:
     nacos:
       discovery:
         server-addr: 82.156.216.48:8848
-datasource:
+  datasource:
     url: jdbc:mysql://82.156.216.48:3306/user_center
     hikari:
       username: root
       password: root123
       driver-class-name: com.mysql.cj.jdbc.Driver
+  profiles:
+    include:
+      - dubbo
+      - swagger
 
 dubbo:
   application:
@@ -27,8 +31,7 @@ dubbo:
     # 传输协议
     name: dubbo
     # ip不可为127.0.0.1 -> 本机ip
-    #    host: 172.19.160.212
-    host: 192.168.3.9
+    host: 172.21.0.14
     # 随机端口
     port: 20881
 

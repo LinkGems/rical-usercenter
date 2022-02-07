@@ -102,7 +102,6 @@
             <!--profile环境打包-->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>movie-predication</id>

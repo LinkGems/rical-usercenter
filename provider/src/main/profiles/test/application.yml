@@ -17,30 +17,7 @@ spring:
   profiles:
     include:
       - dubbo
+      - job
+      - dversion
       - swagger
 
-dubbo:
-  application:
-    # 应用名称
-    name: rical-backend-provider
-    id: rical-backend-provider
-  registry:
-    # 注册中心地址
-    address: nacos://82.156.216.48:8848/
-  protocol:
-    # 传输协议
-    name: dubbo
-    # ip不可为127.0.0.1 -> 本机ip
-    host: 172.19.160.212
-    # 随机端口
-    port: 20881
-
-job:
-  admin:
-    accessToken: accessToken
-    address:
-    ip:
-    adminAddresses: http://localhost:9001
-    port: 9999
-    logPath: /home/app/applogs/job-center/jobhandler
-    logRetentionDays: 30

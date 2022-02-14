@@ -29,16 +29,19 @@ public class App {
 
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(App.class);
-        application.setRegisterShutdownHook(false);//关闭spring的shutdown hook，后续手动触发
+        // 关闭spring的shutdown hook，后续手动触发
+        application.setRegisterShutdownHook(false);
         final ConfigurableApplicationContext context = application.run(args);
         Runtime.getRuntime().addShutdownHook(new Thread("T_SHUTDOWN_HOOK") {
             public void run() {
                 log.info("”====================shutdown App====================“。");
                 //....这里可以做其他优雅退出处理，例如回收本地线程池、关闭定时调度器等的操作
 
-                waitDubboShutdown(1000,5);//每次等1000ms，最多等5次；优雅退出时间是动态的（可能1秒就能优雅退出完毕）；但如果退出时间大于5秒，那么则放弃优雅退出，直接退出。
+                // 每次等1000ms，最多等5次；优雅退出时间是动态的（可能1秒就能优雅退出完毕）
+                // 但如果退出时间大于5秒，那么则放弃优雅退出，直接退出。
+                waitDubboShutdown(1000,5);
 
-                //关闭spring容器
+                // 关闭spring容器
                 context.close();
             }
         });
@@ -51,7 +54,7 @@ public class App {
      */
     private static void waitDubboShutdown(long sleepMillis, int sleepMaxTimes) {
         for (int sleepWaitTimes=0; sleepWaitTimes <sleepMaxTimes; sleepWaitTimes++){
-            //如果dubbo的server没有关闭完成，会睡眠等待，最多等待三次
+            // 如果dubbo的server没有关闭完成，会睡眠等待，最多等待三次
             Collection existingDubboServers = DubboProtocol.getDubboProtocol().getServers();
             Collection existingDubboExporters  = DubboProtocol.getDubboProtocol().getExporters();
             log.info("existing dubbo servers : {}, existing dubbo expoerters {} ,  sleepWaitTimes : {}", existingDubboServers, existingDubboExporters, sleepWaitTimes);
@@ -66,7 +69,7 @@ public class App {
             }
         }
 
-        //优雅退出失败，打印日志
+        // 优雅退出失败，打印日志
         Collection existingDubboServers = DubboProtocol.getDubboProtocol().getServers();
         if (!existingDubboServers.isEmpty()) {
             log.warn("DUBBO服务Server依然存在，不再等待其销毁，可能会导致优雅退出失败 {}",existingDubboServers);

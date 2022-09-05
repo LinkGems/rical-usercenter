@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.whitrue</groupId>
-            <artifactId>rical.backend.consumer</artifactId>
+            <artifactId>rical.backend.service</artifactId>
         </dependency>
 
         <dependency>

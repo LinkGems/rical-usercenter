@@ -1,9 +1,9 @@
 package com.whitrue.rical.backend.service.Impl;
 
 import com.whitrue.rical.backend.dao.mapper.user.UserBaseMapper;
-import com.whitrue.rical.backend.dao.po.user.UserBase;
 import com.whitrue.rical.backend.domain.adapter.UserAdapter;
 import com.whitrue.rical.backend.domain.dto.UserBaseDTO;
+import com.whitrue.rical.backend.domain.po.user.UserBase;
 import com.whitrue.rical.backend.service.IUserService;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;

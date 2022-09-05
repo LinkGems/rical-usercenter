@@ -24,12 +24,12 @@
 
         <dependency>
             <groupId>com.whitrue</groupId>
-            <artifactId>rical.backend.export</artifactId>
+            <artifactId>rical.backend.common</artifactId>
         </dependency>
 
         <dependency>
             <groupId>com.whitrue</groupId>
-            <artifactId>rical.backend.dao</artifactId>
+            <artifactId>rical.backend.export</artifactId>
         </dependency>
 
     </dependencies>

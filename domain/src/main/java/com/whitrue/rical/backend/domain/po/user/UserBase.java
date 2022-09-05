@@ -1,4 +1,4 @@
-package com.whitrue.rical.backend.dao.po.user;
+package com.whitrue.rical.backend.domain.po.user;
 
 import java.util.Date;
 import javax.persistence.*;

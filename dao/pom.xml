@@ -21,13 +21,8 @@
     <dependencies>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
+            <groupId>com.whitrue</groupId>
+            <artifactId>rical.backend.domain</artifactId>
         </dependency>
 
     </dependencies>

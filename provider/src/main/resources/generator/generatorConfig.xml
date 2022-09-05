@@ -23,8 +23,8 @@
 
         <!--实体-->
         <javaModelGenerator targetPackage="com.whitrue.rical.backend.domain.po${moduleName}"
-                            targetProject="../dao/src/main/java"/>
-<!--                            targetProject="../domain/src/main/java"/>-->
+                            targetProject="../domain/src/main/java"/>
+        <!--targetProject="../dao/src/main/java"/>-->
 
         <!--mapper.xml-->
         <sqlMapGenerator targetPackage="mapper${moduleName}"

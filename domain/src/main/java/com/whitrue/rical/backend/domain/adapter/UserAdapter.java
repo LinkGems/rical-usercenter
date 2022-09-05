@@ -1,7 +1,7 @@
 package com.whitrue.rical.backend.domain.adapter;
 
-import com.whitrue.rical.backend.dao.po.user.UserBase;
 import com.whitrue.rical.backend.domain.dto.UserBaseDTO;
+import com.whitrue.rical.backend.domain.po.user.UserBase;
 import com.whitrue.rical.backend.export.pojo.UserBaseModel;
 
 /**

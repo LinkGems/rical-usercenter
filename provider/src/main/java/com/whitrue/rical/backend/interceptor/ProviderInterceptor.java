@@ -1,7 +1,5 @@
 package com.whitrue.rical.backend.interceptor;
 
-import com.whitrue.rical.common.domain.ThreadLocalData;
-import com.whitrue.rical.common.utils.StringUtil;
 import com.whitrue.rical.common.utils.ThreadLocalUtil;
 import org.apache.dubbo.rpc.RpcContext;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -36,23 +34,17 @@ public class ProviderInterceptor {
      * 异常类型匹配（throws-pattern?）
      * 其中后面跟着“?”的是可选项
      */
-    @Pointcut("execution(public * com.whitrue..*.provider.*.*(..))")
-    public void rpcMethod(){ }
+    @Pointcut("execution(public * com.whitrue..*.provider.*.*(..)) || execution(public * com.whitrue..*.controller.*.*(..))")
+    public void providerMethod(){ }
 
-    @Before("rpcMethod()")
+    @Before("providerMethod()")
     public void before(){
-        ThreadLocalData data = new ThreadLocalData();
-        String curAppKey = RpcContext.getContext().getAttachment("appKey");
-//        if(StringUtil.isEmpty(curAppKey)){
-//            curAppKey = appKey;
-//            RpcContext.getContext().setAttachment("appKey", curAppKey);
-//        }
-        data.setAppKey(curAppKey);
-        ThreadLocalUtil.setTl(data);
+        RpcContext.getContext().setAttachment("appKey", this.appKey);
+        ThreadLocalUtil.set("appKey", this.appKey);
     }
 
-    @AfterReturning("rpcMethod()")
+    @AfterReturning("providerMethod()")
     public void afterReturning(){
-        ThreadLocalUtil.removeTl();
+        ThreadLocalUtil.removeThreadLocal();
     }
  }

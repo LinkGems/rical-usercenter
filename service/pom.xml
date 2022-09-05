@@ -17,6 +17,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-dubbo</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.whitrue</groupId>
             <artifactId>rical.backend.common</artifactId>

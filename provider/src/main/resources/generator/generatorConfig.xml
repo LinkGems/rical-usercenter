@@ -22,7 +22,7 @@
         </jdbcConnection>
 
         <!--实体-->
-        <javaModelGenerator targetPackage="com.whitrue.rical.backend.dao.po${moduleName}"
+        <javaModelGenerator targetPackage="com.whitrue.rical.backend.domain.po${moduleName}"
                             targetProject="../dao/src/main/java"/>
 <!--                            targetProject="../domain/src/main/java"/>-->
 

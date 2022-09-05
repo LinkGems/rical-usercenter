@@ -1,8 +1,8 @@
 package com.whitrue.rical.backend.biz.impl;
 
 import com.whitrue.rical.backend.biz.IJobBiz;
-import com.whitrue.rical.backend.consumer.IJobConsumer;
 import com.whitrue.rical.backend.domain.dto.JobInfoDTO;
+import com.whitrue.rical.backend.service.IJobConsumer;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

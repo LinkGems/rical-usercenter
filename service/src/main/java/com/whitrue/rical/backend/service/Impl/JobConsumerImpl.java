@@ -1,10 +1,11 @@
-package com.whitrue.rical.backend.consumer.impl;
+package com.whitrue.rical.backend.service.Impl;
 
 import com.whitrue.jobcenter.export.pojo.JobQueryModel;
 import com.whitrue.jobcenter.export.remote.IJobProvider;
-import com.whitrue.rical.backend.consumer.IJobConsumer;
+import com.whitrue.rical.backend.service.IJobConsumer;
 import com.whitrue.rical.backend.domain.adapter.JobAdapter;
 import com.whitrue.rical.backend.domain.dto.JobInfoDTO;
+import com.whitrue.rical.backend.service.IJobConsumer;
 import com.whitrue.rical.common.domain.BaseResponse;
 import org.springframework.stereotype.Service;
 

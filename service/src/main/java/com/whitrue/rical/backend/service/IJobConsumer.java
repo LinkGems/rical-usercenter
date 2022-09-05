@@ -1,4 +1,4 @@
-package com.whitrue.rical.backend.consumer;
+package com.whitrue.rical.backend.service;
 
 import com.whitrue.rical.backend.domain.dto.JobInfoDTO;
 

@@ -7,7 +7,7 @@ import com.whitrue.rical.backend.domain.vo.req.JobAddReq;
 import com.whitrue.rical.backend.domain.vo.resp.JobInfoResp;
 import com.whitrue.rical.common.domain.BaseResponse;
 import com.whitrue.rical.common.utils.ThreadLocalUtil;
-import com.whitrue.rical.common.utils.validate.ValidateUtil;
+//import com.whitrue.rical.common.utils.validate.ValidateUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -31,38 +31,38 @@ public class JobController {
 
     @PostMapping("add")
     public BaseResponse<Boolean> addJob(@RequestBody JobAddReq req){
-        BaseResponse<Boolean> resp = new BaseResponse<>();
-        ValidateUtil validate = new ValidateUtil()
-                .object("JobAddReq", () -> req)
-                .notNull("author", "scheduleType", "scheduleConf", "executorHandler")
-                .build();
-        if(!validate.isValid()){
-            resp.setSuccess(false);
-            resp.setError(validate.getError());
-            return resp;
-        }
+//        BaseResponse<Boolean> resp = new BaseResponse<>();
+//        ValidateUtil validate = new ValidateUtil()
+//                .object("JobAddReq", () -> req)
+//                .notNull("author", "scheduleType", "scheduleConf", "executorHandler")
+//                .build();
+//        if(!validate.isValid()){
+//            resp.setSuccess(false);
+//            resp.setError(validate.getError());
+//            return resp;
+//        }
 
         JobInfoDTO jobInfoDTO = JobAdapter.addReq2dto(req);
-        String businessId = String.format("%s_addJob_%d", ThreadLocalUtil.getAppKey(), System.currentTimeMillis());
+        String businessId = String.format("%s_addJob_%d", ThreadLocalUtil.get("appkey"), System.currentTimeMillis());
         jobInfoDTO.setBusinessId(businessId);
         Boolean result = jobBiz.addJob(jobInfoDTO);
-        return resp.populateResponse(result);
+        return BaseResponse.success(result);
     }
 
     @GetMapping("query")
     public BaseResponse<JobInfoResp> addJob(@RequestParam("jobId") Integer jobId){
-        BaseResponse<JobInfoResp> resp = new BaseResponse<>();
-        ValidateUtil validate = new ValidateUtil()
-                .expression()
-                .check("check jobId", ()->jobId!=null&&jobId>0)
-                .build();
-        if(!validate.isValid()){
-            resp.setSuccess(false);
-            resp.setError(validate.getError());
-            return resp;
-        }
+//        BaseResponse<JobInfoResp> resp = new BaseResponse<>();
+//        ValidateUtil validate = new ValidateUtil()
+//                .expression()
+//                .check("check jobId", ()->jobId!=null&&jobId>0)
+//                .build();
+//        if(!validate.isValid()){
+//            resp.setSuccess(false);
+//            resp.setError(validate.getError());
+//            return resp;
+//        }
 
         JobInfoDTO result = jobBiz.queryJob(jobId);
-        return resp.populateResponse(JobAdapter.dto2resp(result));
+        return BaseResponse.success(JobAdapter.dto2resp(result));
     }
 }

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>rical.backend</artifactId>
-        <groupId>com.whitrue</groupId>
+        <groupId>com.wtrue</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -18,7 +18,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.whitrue</groupId>
+            <groupId>com.wtrue</groupId>
             <artifactId>rical.backend.biz</artifactId>
         </dependency>
     </dependencies>

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.whitrue</groupId>
+    <groupId>com.wtrue</groupId>
     <artifactId>rical.backend</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
@@ -76,49 +76,49 @@
 
             <!--backend-->
             <dependency>
-                <groupId>com.whitrue</groupId>
+                <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.export</artifactId>
                 <version>${rical.backend.export.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.whitrue</groupId>
+                <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.task</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.whitrue</groupId>
+                <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.biz</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.whitrue</groupId>
+                <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.consumer</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.whitrue</groupId>
+                <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.whitrue</groupId>
+                <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.whitrue</groupId>
+                <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.whitrue</groupId>
+                <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.common</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <!--job-center-->
             <dependency>
-                <groupId>com.whitrue</groupId>
+                <groupId>com.wtrue</groupId>
                 <artifactId>job-center.export</artifactId>
                 <version>${job-center.export.version}</version>
             </dependency>
@@ -129,7 +129,7 @@
     <dependencies>
         <!--common-->
         <dependency>
-            <groupId>com.whitrue</groupId>
+            <groupId>com.wtrue</groupId>
             <artifactId>rical.common</artifactId>
             <version>${rical-common.version}</version>
         </dependency>

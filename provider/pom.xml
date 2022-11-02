@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>rical.backend</artifactId>
-        <groupId>com.whitrue</groupId>
+        <groupId>com.wtrue</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -46,7 +46,7 @@
 
         <!--rical-->
         <dependency>
-            <groupId>com.whitrue</groupId>
+            <groupId>com.wtrue</groupId>
             <artifactId>rical.backend.task</artifactId>
         </dependency>
     </dependencies>
@@ -58,7 +58,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.whitrue.rical.backend.App</mainClass>
+                    <mainClass>com.wtrue.rical.backend.BackendApp</mainClass>
                 </configuration>
                 <executions>
                     <execution>

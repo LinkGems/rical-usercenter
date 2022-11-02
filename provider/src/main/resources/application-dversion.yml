@@ -1,10 +1,10 @@
 provider:
-  whitrue:
+  wtrue:
     rical:
       backend:
         ITestProvider: latest
 
 consumer:
-  whitrue:
+  wtrue:
     job-center:
       IJobProvider: latest

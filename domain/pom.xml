@@ -17,10 +17,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.wtrue</groupId>
-            <artifactId>job-center.export</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.wtrue</groupId>

@@ -3,8 +3,3 @@ provider:
     rical:
       backend:
         ITestProvider: latest
-
-consumer:
-  wtrue:
-    job-center:
-      IJobProvider: latest

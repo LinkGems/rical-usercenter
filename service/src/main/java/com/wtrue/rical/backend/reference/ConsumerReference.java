@@ -1,6 +1,5 @@
 package com.wtrue.rical.backend.reference;
 
-import com.wtrue.jobcenter.export.remote.IJobProvider;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,6 +11,4 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ConsumerReference {
 
-    @Reference(version = "${consumer.wtrue.job-center.IJobProvider}", init = true, check = false)
-    public IJobProvider jobProvider;
 }

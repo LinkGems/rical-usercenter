@@ -10,7 +10,6 @@
     <modules>
         <module>provider</module>
         <module>export</module>
-        <module>task</module>
         <module>dao</module>
         <module>domain</module>
         <module>biz</module>
@@ -30,7 +29,6 @@
         <!--服务依赖-->
         <rical-common.version>1.0.3-SNAPSHOT</rical-common.version>
         <rical.backend.export.version>1.0.0-SNAPSHOT</rical.backend.export.version>
-        <job-center.export.version>1.0.0-SNAPSHOT</job-center.export.version>
         <!--mysql-->
         <mysql.version>8.0.16</mysql.version>
         <tk-mybatis.version>2.1.5</tk-mybatis.version>
@@ -114,13 +112,6 @@
                 <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.common</artifactId>
                 <version>${project.version}</version>
-            </dependency>
-
-            <!--job-center-->
-            <dependency>
-                <groupId>com.wtrue</groupId>
-                <artifactId>job-center.export</artifactId>
-                <version>${job-center.export.version}</version>
             </dependency>
 
         </dependencies>

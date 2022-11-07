@@ -12,11 +12,10 @@ spring:
     url: jdbc:mysql://82.156.216.48:3306/user_center
     hikari:
       username: root
-      password: root123
+      password: meisql
       driver-class-name: com.mysql.cj.jdbc.Driver
   profiles:
     include:
       - dubbo
-      - job
       - dversion
       - swagger

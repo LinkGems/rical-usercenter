@@ -80,11 +80,6 @@
             </dependency>
             <dependency>
                 <groupId>com.wtrue</groupId>
-                <artifactId>rical.backend.task</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.biz</artifactId>
                 <version>${project.version}</version>
             </dependency>

@@ -7,9 +7,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 82.156.216.48:8848
+        server-addr: 172.21.0.14:8848
   datasource:
-    url: jdbc:mysql://82.156.216.48:3306/user_center
+    url: jdbc:mysql://172.21.0.14:3306/user_center
     hikari:
       username: root
       password: meisql

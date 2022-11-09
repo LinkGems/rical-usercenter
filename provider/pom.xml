@@ -47,7 +47,7 @@
         <!--rical-->
         <dependency>
             <groupId>com.wtrue</groupId>
-            <artifactId>rical.backend.task</artifactId>
+            <artifactId>rical.backend.biz</artifactId>
         </dependency>
     </dependencies>
 

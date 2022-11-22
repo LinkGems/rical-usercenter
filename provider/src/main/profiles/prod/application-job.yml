@@ -1,0 +1,7 @@
+xxl:
+  job:
+    admin:
+      addresses: http://172.21.0.14:19999/xxl-job-admin
+    accessToken: wtjc
+    executor:
+      appname: wt-backend-executor

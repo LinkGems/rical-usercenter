@@ -49,6 +49,10 @@
             <groupId>com.wtrue</groupId>
             <artifactId>rical.backend.biz</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.wtrue</groupId>
+            <artifactId>rical.backend.task</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

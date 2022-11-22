@@ -5,3 +5,4 @@ xxl:
     accessToken: wtjc
     executor:
       appname: wt-backend-executor
+      port: 19998

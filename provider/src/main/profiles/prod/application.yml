@@ -19,4 +19,5 @@ spring:
       - dubbo
       - dversion
       - swagger
+      - job
 

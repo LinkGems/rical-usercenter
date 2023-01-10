@@ -68,6 +68,7 @@
                 <executions>
                     <execution>
                         <goals>
+                            <!--可以把依赖包都打到生成的jar包中-->
                             <goal>repackage</goal>
                         </goals>
                     </execution>

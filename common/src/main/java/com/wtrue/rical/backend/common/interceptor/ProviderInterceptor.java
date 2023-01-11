@@ -1,4 +1,4 @@
-package com.wtrue.rical.backend.interceptor;
+package com.wtrue.rical.backend.common.interceptor;
 
 import com.wtrue.rical.common.utils.ThreadLocalUtil;
 import org.apache.dubbo.rpc.RpcContext;

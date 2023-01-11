@@ -16,6 +16,7 @@
         <module>service</module>
         <module>common</module>
         <module>task</module>
+        <module>api</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -80,6 +81,11 @@
                 <groupId>com.wtrue</groupId>
                 <artifactId>rical.backend.export</artifactId>
                 <version>${rical.backend.export.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.wtrue</groupId>
+                <artifactId>rical.backend.api</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.wtrue</groupId>

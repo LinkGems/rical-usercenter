@@ -1,4 +1,4 @@
-package com.wtrue.rical.backend.controller;
+package com.wtrue.rical.backend.api.controller;
 
 import com.wtrue.rical.backend.export.provider.IUserProvider;
 import com.wtrue.rical.backend.export.pojo.UserBaseModel;
@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * @description:
+ * @description: 用户Http接口
  * @author: meidanlong
  * @date: 2021/7/18 5:04 PM
  */
 @RestController
-@RequestMapping("/user/")
+@RequestMapping("user")
 public class UserController {
 
     @Resource

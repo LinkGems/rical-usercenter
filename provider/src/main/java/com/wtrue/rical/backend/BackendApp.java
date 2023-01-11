@@ -45,6 +45,8 @@ public class BackendApp {
                 context.close();
             }
         });
+
+        log.info("==[BackendApp#main] - Application started.");
     }
 
     /**

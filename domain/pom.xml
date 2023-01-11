@@ -23,11 +23,6 @@
             <artifactId>rical.backend.common</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.wtrue</groupId>
-            <artifactId>rical.backend.export</artifactId>
-        </dependency>
-
     </dependencies>
 
 </project>

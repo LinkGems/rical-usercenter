@@ -23,7 +23,7 @@
     </distributionManagement>
 
     <properties>
-        <rical-common.version>1.0.3-SNAPSHOT</rical-common.version>
+        <rical-common.version>1.0.4-SNAPSHOT</rical-common.version>
     </properties>
 
     <dependencies>

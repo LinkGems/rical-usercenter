@@ -11,14 +11,14 @@
 
     <distributionManagement>
         <repository>
-            <id>whitrue-hosted</id>
+            <id>wtrue_hosted</id>
             <name>wtrue Nexus Release Repository</name>
-            <url>http://82.156.216.48:8081/repository/whitrue-hosted/</url>
+            <url>http://82.156.216.48:8081/repository/wtrue_hosted/</url>
         </repository>
         <snapshotRepository>
-            <id>whitrue-snapshot</id>
+            <id>wtrue_snapshot</id>
             <name>wtrue Nexus Snapshot Repository</name>
-            <url>http://82.156.216.48:8081/repository/whitrue-snapshot/</url>
+            <url>http://82.156.216.48:8081/repository/wtrue_snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
 

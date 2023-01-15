@@ -1,8 +1,8 @@
 xxl:
   job:
     admin:
-      addresses: http://172.18.0.2:8080/xxl-job-admin
+      addresses: http://172.18.2.21:8080/xxl-job-admin
     accessToken: wtjc
     executor:
-      appname: wt-backend-executor
+      appname: rical-backend-provider
       port: 9900

@@ -81,5 +81,7 @@ public class BackendApp {
         if (!existingDubboExporters.isEmpty()) {
             log.warn("DUBBO服务Exporters依然存在，不再等待其销毁，可能会导致优雅退出失败 {}",existingDubboExporters);
         }
+
+        log.info("==[BackendApp#waitDubboShutdown] - Application stopped.");
     }
 }

@@ -1,6 +1,6 @@
 package com.wtrue.rical.backend.domain.dto;
 
-import com.wtrue.rical.common.domain.BaseObject;
+import com.wtrue.rical.common.adam.domain.BaseObject;
 import lombok.Getter;
 import lombok.Setter;
 

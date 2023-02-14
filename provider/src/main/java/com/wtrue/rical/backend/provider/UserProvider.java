@@ -5,7 +5,7 @@ import com.wtrue.rical.backend.domain.adapter.UserAdapter;
 import com.wtrue.rical.backend.domain.dto.UserBaseDTO;
 import com.wtrue.rical.backend.export.pojo.UserBaseModel;
 import com.wtrue.rical.backend.export.provider.IUserProvider;
-import com.wtrue.rical.common.domain.BaseResponse;
+import com.wtrue.rical.common.adam.domain.BaseResponse;
 import org.apache.dubbo.config.annotation.Service;
 
 import javax.annotation.Resource;

@@ -1,7 +1,7 @@
 package com.wtrue.rical.backend.export.provider;
 
 import com.wtrue.rical.backend.export.pojo.UserBaseModel;
-import com.wtrue.rical.common.domain.BaseResponse;
+import com.wtrue.rical.common.adam.domain.BaseResponse;
 
 /**
  * @description:

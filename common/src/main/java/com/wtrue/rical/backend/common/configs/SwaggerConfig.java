@@ -1,7 +1,7 @@
 package com.wtrue.rical.backend.common.configs;
 
 
-import com.wtrue.rical.common.config.Swagger;
+import com.wtrue.rical.common.eve.config.Swagger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @date: 2021/3/25 7:43 PM
  */
 @Configuration
-@EnableSwagger2
+//@EnableSwagger2
 public class SwaggerConfig {
 
     @Value("${swagger.title}")
@@ -34,19 +34,19 @@ public class SwaggerConfig {
     @Value("${swagger.self-url}")
     private String selfUrl;
 
-    @Bean
-    public Docket swaggerDocket(){
-        Contact contact = new Contact(author, selfUrl, email);
-        Swagger swagger = Swagger.builder()
-                .title(title)
-                .contact(contact)
-                .description(description)
-                .version(version)
-                .url(web)
-                .build();
-        Docket docket = swagger.createRestApiOfAnyPackage();
-        System.out.println(docket.toString());
-        return swagger.createRestApiOfAnyPackage();
-    }
+//    @Bean
+//    public Docket swaggerDocket(){
+//        Contact contact = new Contact(author, selfUrl, email);
+//        Swagger swagger = Swagger.builder()
+//                .title(title)
+//                .contact(contact)
+//                .description(description)
+//                .version(version)
+//                .url(web)
+//                .build();
+//        Docket docket = swagger.createRestApiOfAnyPackage();
+//        System.out.println(docket.toString());
+//        return swagger.createRestApiOfAnyPackage();
+//    }
 
 }

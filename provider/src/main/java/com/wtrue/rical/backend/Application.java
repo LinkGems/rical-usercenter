@@ -7,7 +7,6 @@ import org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 import tk.mybatis.spring.annotation.MapperScan;
 
 import javax.annotation.Resource;
@@ -22,13 +21,13 @@ import java.util.Collection;
 @SpringBootApplication
 @EnableDubbo
 @Slf4j
-public class BackendApp {
+public class Application {
 
     @Resource
     private ConsumerReference consumerReference;
 
     public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(BackendApp.class);
+        SpringApplication application = new SpringApplication(Application.class);
         // 关闭spring的shutdown hook，后续手动触发
         application.setRegisterShutdownHook(false);
         final ConfigurableApplicationContext context = application.run(args);

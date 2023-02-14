@@ -7,7 +7,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 82.156.216.48:8848
+        server-addr: localhost:8848
   datasource:
     url: jdbc:mysql://82.156.216.48:3306/user_center
     hikari:

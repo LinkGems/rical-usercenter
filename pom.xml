@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wtrue</groupId>
-    <artifactId>rical.backend</artifactId>
+    <artifactId>rical.usercenter</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>provider</module>
@@ -26,7 +26,7 @@
         <maven.version>3.6.0</maven.version>
         <!--服务依赖-->
         <rical-common-eve.version>1.0.1-SNAPSHOT</rical-common-eve.version>
-        <rical.backend.export.version>1.0.0-SNAPSHOT</rical.backend.export.version>
+        <rical.usercenter.export.version>1.0.0-SNAPSHOT</rical.usercenter.export.version>
     </properties>
 
     <dependencyManagement>
@@ -42,44 +42,44 @@
             <!--backend-export-->
             <dependency>
                 <groupId>com.wtrue</groupId>
-                <artifactId>rical.backend.export</artifactId>
-                <version>${rical.backend.export.version}</version>
+                <artifactId>rical.usercenter.export</artifactId>
+                <version>${rical.usercenter.export.version}</version>
             </dependency>
 
             <!--backend-->
             <dependency>
                 <groupId>com.wtrue</groupId>
-                <artifactId>rical.backend.api</artifactId>
+                <artifactId>rical.usercenter.api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.wtrue</groupId>
-                <artifactId>rical.backend.biz</artifactId>
+                <artifactId>rical.usercenter.biz</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.wtrue</groupId>
-                <artifactId>rical.backend.service</artifactId>
+                <artifactId>rical.usercenter.service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.wtrue</groupId>
-                <artifactId>rical.backend.domain</artifactId>
+                <artifactId>rical.usercenter.domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.wtrue</groupId>
-                <artifactId>rical.backend.dao</artifactId>
+                <artifactId>rical.usercenter.dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.wtrue</groupId>
-                <artifactId>rical.backend.common</artifactId>
+                <artifactId>rical.usercenter.common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.wtrue</groupId>
-                <artifactId>rical.backend.task</artifactId>
+                <artifactId>rical.usercenter.task</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

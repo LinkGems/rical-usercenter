@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: rical-backend-provider
+    name: rical.usercenter
   cloud:
     nacos:
       discovery:

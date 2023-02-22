@@ -1,5 +1,5 @@
 provider:
   wtrue:
     rical:
-      backend:
+      usercenter:
         ITestProvider: latest

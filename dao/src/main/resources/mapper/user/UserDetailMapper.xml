@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wtrue.rical.usercenter.dao.mapper.user.UserDetailMapper">
+  <resultMap id="BaseResultMap" type="com.wtrue.rical.usercenter.domain.po.user.UserDetail">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="USER_ID" jdbcType="BIGINT" property="userId" />
+    <result column="BASE_USER_ID" jdbcType="BIGINT" property="baseUserId" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="MOBILE" jdbcType="VARCHAR" property="mobile" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="WEIXIN_ID" jdbcType="VARCHAR" property="weixinId" />
+    <result column="ALI_ID" jdbcType="VARCHAR" property="aliId" />
+    <result column="DELETED" jdbcType="TINYINT" property="deleted" />
+    <result column="CREATED_TIME" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="UPDATED_TIME" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+</mapper>

@@ -16,8 +16,8 @@ public class UserAdapter {
             return null;
         }
         UserBaseDTO userBaseDTO = new UserBaseDTO();
-        userBaseDTO.setUserId(userBase.getUserId());
-        userBaseDTO.setUserName(userBase.getUserName());
+        userBaseDTO.setBaseUserId(userBase.getBaseUserId());
+        userBaseDTO.setBaseUserName(userBase.getBaseUserName());
         userBaseDTO.setSex(userBase.getSex());
         userBaseDTO.setIdType(userBase.getIdType());
         userBaseDTO.setIdNum(userBase.getIdNum());
@@ -29,8 +29,8 @@ public class UserAdapter {
             return null;
         }
         UserBaseDTO userBaseDTO = new UserBaseDTO();
-        userBaseDTO.setUserId(userBaseModel.getUserId());
-        userBaseDTO.setUserName(userBaseModel.getUserName());
+        userBaseDTO.setBaseUserId(userBaseModel.getBaseUserId());
+        userBaseDTO.setBaseUserName(userBaseModel.getBaseUserName());
         userBaseDTO.setSex(userBaseModel.getSex());
         userBaseDTO.setIdType(userBaseModel.getIdType());
         userBaseDTO.setIdNum(userBaseModel.getIdNum());
@@ -42,8 +42,8 @@ public class UserAdapter {
             return null;
         }
         UserBaseModel userBaseModel = new UserBaseModel();
-        userBaseModel.setUserId(userBaseDTO.getUserId());
-        userBaseModel.setUserName(userBaseDTO.getUserName());
+        userBaseModel.setBaseUserId(userBaseDTO.getBaseUserId());
+        userBaseModel.setBaseUserName(userBaseDTO.getBaseUserName());
         userBaseModel.setSex(userBaseDTO.getSex());
         userBaseModel.setIdType(userBaseDTO.getIdType());
         userBaseModel.setIdNum(userBaseDTO.getIdNum());

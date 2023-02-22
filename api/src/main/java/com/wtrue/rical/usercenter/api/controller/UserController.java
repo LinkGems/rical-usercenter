@@ -1,5 +1,6 @@
 package com.wtrue.rical.usercenter.api.controller;
 
+import com.wtrue.rical.usercenter.domain.dto.UserDetailDTO;
 import com.wtrue.rical.usercenter.export.provider.IUserProvider;
 import com.wtrue.rical.usercenter.export.pojo.UserBaseModel;
 import com.wtrue.rical.common.adam.domain.BaseResponse;
@@ -22,10 +23,7 @@ public class UserController {
     private IUserProvider userProvider;
 
     @GetMapping("query")
-    public BaseResponse<UserBaseModel> queryUser(Long userId){
-//        return userProvider.queryUser(userId);
-        UserBaseModel userBaseModel = new UserBaseModel();
-        userBaseModel.setUserId(userId);
-        return BaseResponse.success(userBaseModel);
+    public BaseResponse<UserBaseModel> queryUserById(Long userId){
+        return null;
     }
 }

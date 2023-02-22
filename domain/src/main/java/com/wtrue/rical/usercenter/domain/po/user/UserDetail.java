@@ -9,8 +9,8 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Table(name = "user_base")
-public class UserBase {
+@Table(name = "user_detail")
+public class UserDetail {
     /**
      * 主键
      */
@@ -19,34 +19,52 @@ public class UserBase {
     private Long id;
 
     /**
-     * 用户唯一ID;用户真实唯一ID
+     * 用户详情ID
+     */
+    @Column(name = "USER_ID")
+    private Long userId;
+
+    /**
+     * 用户唯一ID
      */
     @Column(name = "BASE_USER_ID")
     private Long baseUserId;
 
     /**
-     * 用户名称;用户真实名称（姓名）
+     * 用户登录用户名
      */
-    @Column(name = "BASE_USER_NAME")
-    private String baseUserName;
+    @Column(name = "USER_NAME")
+    private String userName;
 
     /**
-     * 用户性别;用户性别
+     * 用户登录密码;密文
      */
-    @Column(name = "SEX")
-    private Byte sex;
+    @Column(name = "PASSWORD")
+    private String password;
 
     /**
-     * 身份类型;1:身份证，2:护照
+     * 手机号
      */
-    @Column(name = "ID_TYPE")
-    private Byte idType;
+    @Column(name = "MOBILE")
+    private String mobile;
 
     /**
-     * 证件号;用户身份证号
+     * 邮箱
      */
-    @Column(name = "ID_NUM")
-    private String idNum;
+    @Column(name = "EMAIL")
+    private String email;
+
+    /**
+     * 微信ID
+     */
+    @Column(name = "WEIXIN_ID")
+    private String weixinId;
+
+    /**
+     * 阿里ID
+     */
+    @Column(name = "ALI_ID")
+    private String aliId;
 
     /**
      * 是否删除

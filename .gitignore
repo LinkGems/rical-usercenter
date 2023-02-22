@@ -13,3 +13,5 @@ target/
 /task/target/*
 /export/target/*
 /api/target/*
+
+/dao/pdmaner

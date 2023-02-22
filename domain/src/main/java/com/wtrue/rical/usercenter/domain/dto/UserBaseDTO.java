@@ -6,7 +6,7 @@ import lombok.Setter;
 
 
 /**
- * @description:
+ * @description:用户实名信息表
  * @author: meidanlong
  * @date: 2021/11/28 7:11 PM
  */
@@ -14,28 +14,30 @@ import lombok.Setter;
 @Setter
 public class UserBaseDTO extends BaseObject {
 
-    /**
-     * 用户唯一ID 用户唯一ID
-     */
-    private Long userId;
 
     /**
-     * 用户名称 用户名称（姓名）
+     * 用户唯一ID;用户真实唯一ID
      */
-    private String userName;
+    private Long baseUserId;
 
     /**
-     * 用户性别 用户性别
+     * 用户名称;用户真实名称（姓名）
      */
-    private Integer sex;
+    private String baseUserName;
 
     /**
-     * 身份类型 1:身份证，2:护照
+     * 用户性别;用户性别
      */
-    private Integer idType;
+    private Byte sex;
 
     /**
-     * 证件号 用户身份证号
+     * 身份类型;1:身份证，2:护照
+     */
+    private Byte idType;
+
+    /**
+     * 证件号;用户身份证号
      */
     private String idNum;
+
 }

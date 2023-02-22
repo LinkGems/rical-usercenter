@@ -5,12 +5,13 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="USER_ID" jdbcType="BIGINT" property="userId" />
-    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
-    <result column="SEX" jdbcType="INTEGER" property="sex" />
-    <result column="ID_TYPE" jdbcType="INTEGER" property="idType" />
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="BASE_USER_ID" jdbcType="BIGINT" property="baseUserId" />
+    <result column="BASE_USER_NAME" jdbcType="VARCHAR" property="baseUserName" />
+    <result column="SEX" jdbcType="TINYINT" property="sex" />
+    <result column="ID_TYPE" jdbcType="TINYINT" property="idType" />
     <result column="ID_NUM" jdbcType="VARCHAR" property="idNum" />
-    <result column="DELETED" jdbcType="VARCHAR" property="deleted" />
+    <result column="DELETED" jdbcType="TINYINT" property="deleted" />
     <result column="CREATED_TIME" jdbcType="TIMESTAMP" property="createdTime" />
     <result column="UPDATED_TIME" jdbcType="TIMESTAMP" property="updatedTime" />
   </resultMap>

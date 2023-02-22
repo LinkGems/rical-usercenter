@@ -23,9 +23,6 @@ import java.util.Collection;
 @Slf4j
 public class Application {
 
-    @Resource
-    private ConsumerReference consumerReference;
-
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(Application.class);
         // 关闭spring的shutdown hook，后续手动触发

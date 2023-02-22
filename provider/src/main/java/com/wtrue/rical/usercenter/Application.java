@@ -33,7 +33,7 @@ public class Application {
         final ConfigurableApplicationContext context = application.run(args);
         Runtime.getRuntime().addShutdownHook(new Thread("T_SHUTDOWN_HOOK") {
             public void run() {
-                log.info("”====================shutdown App====================“。");
+                log.info("==[BackendApp#main] - Application shutdown.");
                 //....这里可以做其他优雅退出处理，例如回收本地线程池、关闭定时调度器等的操作
 
                 // 每次等1000ms，最多等5次；优雅退出时间是动态的（可能1秒就能优雅退出完毕）

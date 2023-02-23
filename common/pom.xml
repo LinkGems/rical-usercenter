@@ -20,12 +20,12 @@
 
         <dependency>
             <groupId>com.wtrue</groupId>
-            <artifactId>rical.usercenter.export</artifactId>
+            <artifactId>rical.usercenter.domain</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.wtrue</groupId>
-            <artifactId>rical.common.eve</artifactId>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
         </dependency>
     </dependencies>
 

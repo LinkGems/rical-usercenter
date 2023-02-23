@@ -23,7 +23,7 @@
     </distributionManagement>
 
     <properties>
-        <rical-common-adam.version>1.0.1-SNAPSHOT</rical-common-adam.version>
+        <rical-common-adam.version>1.0.3-SNAPSHOT</rical-common-adam.version>
     </properties>
 
     <dependencies>

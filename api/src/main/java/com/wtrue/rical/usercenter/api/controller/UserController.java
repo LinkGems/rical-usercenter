@@ -1,5 +1,6 @@
 package com.wtrue.rical.usercenter.api.controller;
 
+import com.wtrue.rical.common.eve.utils.RSAUtil;
 import com.wtrue.rical.usercenter.domain.dto.UserDetailDTO;
 import com.wtrue.rical.usercenter.export.provider.IUserProvider;
 import com.wtrue.rical.usercenter.export.pojo.UserBaseModel;
@@ -21,6 +22,12 @@ public class UserController {
 
     @Resource
     private IUserProvider userProvider;
+
+    @GetMapping("publicKey")
+    public BaseResponse<String> getPublicKey(){
+        String pk = RSAUtil.getPublicKeyStr();
+        return BaseResponse.success(pk);
+    }
 
     @GetMapping("query")
     public BaseResponse<UserBaseModel> queryUserById(Long userId){

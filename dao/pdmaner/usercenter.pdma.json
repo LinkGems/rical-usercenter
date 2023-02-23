@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.3.0",
   "createdTime": "2023-2-22 15:43:46",
-  "updatedTime": "2023-2-22 17:04:01",
+  "updatedTime": "2023-2-23 11:32:57",
   "dbConns": [],
   "profile": {
     "default": {
@@ -617,6 +617,23 @@
           "uiHint": "",
           "id": "BD4AFB1C-7CF3-4D49-AFE0-D2A68EBBF7D1",
           "extProps": {}
+        },
+        {
+          "defKey": "SALT",
+          "defName": "密码盐值",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "C8E0D546-C96A-4C76-BD3E-BA7BCF7B0F2F"
         },
         {
           "defKey": "MOBILE",

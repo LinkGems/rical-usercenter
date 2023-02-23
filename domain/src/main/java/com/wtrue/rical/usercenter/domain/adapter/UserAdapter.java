@@ -1,7 +1,7 @@
 package com.wtrue.rical.usercenter.domain.adapter;
 
 import com.wtrue.rical.usercenter.domain.dto.UserBaseDTO;
-import com.wtrue.rical.usercenter.domain.po.user.UserBase;
+import com.wtrue.rical.usercenter.domain.po.UserBasePO;
 import com.wtrue.rical.usercenter.export.pojo.UserBaseModel;
 
 /**
@@ -11,7 +11,7 @@ import com.wtrue.rical.usercenter.export.pojo.UserBaseModel;
  */
 public class UserAdapter {
 
-    public static UserBaseDTO po2dto(UserBase userBase) {
+    public static UserBaseDTO po2dto(UserBasePO userBase) {
         if (userBase == null) {
             return null;
         }

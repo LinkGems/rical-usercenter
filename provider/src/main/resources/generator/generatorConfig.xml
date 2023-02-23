@@ -22,22 +22,27 @@
         </jdbcConnection>
 
         <!--实体-->
-        <javaModelGenerator targetPackage="com.wtrue.rical.usercenter.domain.po${moduleName}"
+        <javaModelGenerator targetPackage="com.wtrue.rical.usercenter.domain.po"
                             targetProject="../domain/src/main/java"/>
-        <!--targetProject="../dao/src/main/java"/>-->
 
         <!--mapper.xml-->
-        <sqlMapGenerator targetPackage="mapper${moduleName}"
+        <sqlMapGenerator targetPackage="mapper"
                          targetProject="../dao/src/main/resources"/>
 
         <!--mapper接口-->
-        <javaClientGenerator targetPackage="com.wtrue.rical.usercenter.dao.mapper${moduleName}"
+        <javaClientGenerator targetPackage="com.wtrue.rical.usercenter.dao.mapper"
                              targetProject="../dao/src/main/java"
                              type="XMLMAPPER"/>
 
         <!--为哪张表生成代码-->
-        <table tableName="${tableName}">
-            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <table tableName="user_base" domainObjectName="UserBasePO" >
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" identity="true" sqlStatement="MySql"/>
+        </table>
+
+        <table tableName="user_detail" domainObjectName="UserDetailPO" >
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" identity="true" sqlStatement="MySql"/>
         </table>
 
     </context>

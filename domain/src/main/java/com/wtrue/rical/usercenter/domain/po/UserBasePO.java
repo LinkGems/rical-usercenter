@@ -1,4 +1,4 @@
-package com.wtrue.rical.usercenter.domain.po.user;
+package com.wtrue.rical.usercenter.domain.po;
 
 import java.util.Date;
 import javax.persistence.*;
@@ -10,12 +10,13 @@ import lombok.ToString;
 @Setter
 @ToString
 @Table(name = "user_base")
-public class UserBase {
+public class UserBasePO {
     /**
      * 主键
      */
     @Id
     @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     /**

@@ -1,6 +1,7 @@
 package com.wtrue.rical.usercenter.biz;
 
 import com.wtrue.rical.usercenter.domain.dto.UserBaseDTO;
+import com.wtrue.rical.usercenter.domain.dto.UserDetailDTO;
 
 /**
  * @description:
@@ -9,5 +10,7 @@ import com.wtrue.rical.usercenter.domain.dto.UserBaseDTO;
  */
 public interface IUserBiz {
 
-    UserBaseDTO queryUser(Long userId);
+    UserDetailDTO queryUserDetailById(Long userId);
+
+    Long addUserDetail(UserDetailDTO user);
 }

@@ -1,7 +1,7 @@
 package com.wtrue.rical.usercenter.export.provider;
 
-import com.wtrue.rical.usercenter.export.pojo.UserBaseModel;
 import com.wtrue.rical.common.adam.domain.BaseResponse;
+import com.wtrue.rical.usercenter.export.pojo.UserDetailModel;
 
 /**
  * @description:
@@ -10,5 +10,5 @@ import com.wtrue.rical.common.adam.domain.BaseResponse;
  */
 public interface IUserProvider {
 
-    BaseResponse<UserBaseModel> queryUser(Long userId);
+    BaseResponse<UserDetailModel> queryUser(Long userId);
 }

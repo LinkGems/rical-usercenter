@@ -15,6 +15,8 @@ public enum BusinessErrorEnum {
     // 31** 业务异常
     TOKEN_ERROR("3110", "TOKEN异常"),
     TOKEN_EXPIRED("3111", "TOKEN过期"),
+
+    PASSWORD_ERROR("3120", "密码操作失败"),
     ;
 
     /**

@@ -9,7 +9,7 @@ import com.wtrue.rical.usercenter.export.pojo.UserBaseModel;
  * @author: meidanlong
  * @date: 2021/11/28 7:11 PM
  */
-public class UserAdapter {
+public class UserBaseAdapter {
 
     public static UserBaseDTO po2dto(UserBasePO userBase) {
         if (userBase == null) {

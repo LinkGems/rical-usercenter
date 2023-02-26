@@ -1,34 +1,17 @@
-package com.wtrue.rical.usercenter.domain.dto;
+package com.wtrue.rical.usercenter.domain.request;
 
 import com.wtrue.rical.common.adam.domain.BaseObject;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-import javax.persistence.Column;
+import javax.validation.constraints.NotNull;
 
 /**
  * @description:
  * @author: meidanlong
- * @date: 2023/2/22 16:59
+ * @date: 2023/2/25 8:28 PM
  */
-@Getter
-@Setter
-public class UserDetailDTO extends BaseObject {
-
-    /**
-     * 用户详情ID
-     */
-    private Long userId;
-
-    /**
-     * 用户唯一ID
-     */
-    private Long baseUserId;
-
-    /**
-     * 服务Appkey
-     */
-    private String appKey;
+@Data
+public class UserRegisterReq extends BaseObject {
 
     /**
      * 用户登录用户名
@@ -39,11 +22,6 @@ public class UserDetailDTO extends BaseObject {
      * 用户登录密码;密文
      */
     private String password;
-
-    /**
-     * 密码盐值
-     */
-    private String salt;
 
     /**
      * 手机号

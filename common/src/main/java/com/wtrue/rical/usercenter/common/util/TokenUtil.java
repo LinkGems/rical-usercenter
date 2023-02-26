@@ -5,6 +5,7 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.wtrue.rical.common.adam.domain.BaseException;
 import com.wtrue.rical.common.eve.utils.RSAUtil;
 import com.wtrue.rical.usercenter.domain.enums.BusinessErrorEnum;
 import com.wtrue.rical.usercenter.domain.exception.BusinessException;
@@ -21,15 +22,20 @@ public class TokenUtil {
 
     private static final String ISSUER = "签发者";
 
-    public static String generateToken(Long userId) throws Exception{
-        Algorithm algorithm = Algorithm.RSA256(RSAUtil.getPublicKey(), RSAUtil.getPrivateKey());
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(new Date());
-        calendar.add(Calendar.HOUR, 1);
-        return JWT.create().withKeyId(String.valueOf(userId))
-                .withIssuer(ISSUER)
-                .withExpiresAt(calendar.getTime())
-                .sign(algorithm);
+    public static String generateToken(Long userId) {
+        try{
+            Algorithm algorithm = Algorithm.RSA256(RSAUtil.getPublicKey(), RSAUtil.getPrivateKey());
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(new Date());
+            calendar.add(Calendar.HOUR, 1);
+            return JWT.create().withKeyId(String.valueOf(userId))
+                    .withIssuer(ISSUER)
+                    .withExpiresAt(calendar.getTime())
+                    .sign(algorithm);
+        }catch (Exception ex){
+            throw new BusinessException(ex.getMessage());
+        }
+
     }
 
     public static String generateRefreshToken(Long userId) throws Exception{

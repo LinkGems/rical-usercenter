@@ -22,4 +22,16 @@ public class BusinessException extends BaseException {
     public BusinessException(BusinessErrorEnum error) {
         super(error.getCode(), error.getMessage());
     }
+
+    public BusinessException(BusinessErrorEnum error, String message) {
+        super(error.getCode(), message);
+    }
+
+    public BusinessException(ErrorEnum error) {
+        super(error.getCode(), error.getMessage());
+    }
+
+    public BusinessException(ErrorEnum error, String message) {
+        super(error.getCode(), message);
+    }
 }

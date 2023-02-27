@@ -9,6 +9,7 @@ import com.wtrue.rical.common.adam.domain.BaseException;
 import com.wtrue.rical.common.eve.utils.RSAUtil;
 import com.wtrue.rical.usercenter.domain.enums.BusinessErrorEnum;
 import com.wtrue.rical.usercenter.domain.exception.BusinessException;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -20,26 +21,26 @@ import java.util.Date;
  */
 public class TokenUtil {
 
-    private static final String ISSUER = "签发者";
+    private static final String ISSUER = "WTrue";
 
-    public static String generateToken(Long userId) {
-        try{
-            Algorithm algorithm = Algorithm.RSA256(RSAUtil.getPublicKey(), RSAUtil.getPrivateKey());
-            Calendar calendar = Calendar.getInstance();
-            calendar.setTime(new Date());
-            calendar.add(Calendar.HOUR, 1);
-            return JWT.create().withKeyId(String.valueOf(userId))
-                    .withIssuer(ISSUER)
-                    .withExpiresAt(calendar.getTime())
-                    .sign(algorithm);
-        }catch (Exception ex){
-            throw new BusinessException(ex.getMessage());
-        }
+    @Value("${rsa.public.key}")
+    public String publicKey;
+    @Value("${rsa.private.key}")
+    private String privateKey;
 
+    public String generateToken(Long userId) {
+        Algorithm algorithm = Algorithm.RSA256(RSAUtil.getPublicKey(publicKey), RSAUtil.getPrivateKey(privateKey));
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.add(Calendar.HOUR, 1);
+        return JWT.create().withKeyId(String.valueOf(userId))
+                .withIssuer(ISSUER)
+                .withExpiresAt(calendar.getTime())
+                .sign(algorithm);
     }
 
-    public static String generateRefreshToken(Long userId) throws Exception{
-        Algorithm algorithm = Algorithm.RSA256(RSAUtil.getPublicKey(), RSAUtil.getPrivateKey());
+    public String generateRefreshToken(Long userId){
+        Algorithm algorithm = Algorithm.RSA256(RSAUtil.getPublicKey(publicKey), RSAUtil.getPrivateKey(privateKey));
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
         calendar.add(Calendar.DAY_OF_MONTH, 7);
@@ -49,21 +50,12 @@ public class TokenUtil {
                 .sign(algorithm);
     }
 
-    public static Long verifyToken(String token){
-        try{
-            Algorithm algorithm = Algorithm.RSA256(RSAUtil.getPublicKey(), RSAUtil.getPrivateKey());
-            JWTVerifier verifier = JWT.require(algorithm).build();
-            DecodedJWT jwt = verifier.verify(token);
-            String userId = jwt.getKeyId();
-            return Long.valueOf(userId);
-        }catch (TokenExpiredException e){
-            throw new BusinessException(BusinessErrorEnum.TOKEN_EXPIRED);
-        }catch (Exception e){
-            throw new BusinessException(BusinessErrorEnum.TOKEN_ERROR);
-        }
-
-
+    public Long verifyToken(String token){
+        Algorithm algorithm = Algorithm.RSA256(RSAUtil.getPublicKey(publicKey), RSAUtil.getPrivateKey(privateKey));
+        JWTVerifier verifier = JWT.require(algorithm).build();
+        DecodedJWT jwt = verifier.verify(token);
+        String userId = jwt.getKeyId();
+        return Long.valueOf(userId);
     }
-
 
 }

@@ -15,8 +15,8 @@ public class BusinessException extends BaseException {
         super(error, message);
     }
 
-    public BusinessException(String message) {
-        super(ErrorEnum.XXX, message);
+    public BusinessException(Throwable cause) {
+        super(cause);
     }
 
     public BusinessException(BusinessErrorEnum error) {
@@ -33,5 +33,9 @@ public class BusinessException extends BaseException {
 
     public BusinessException(ErrorEnum error, String message) {
         super(error.getCode(), message);
+    }
+
+    public BusinessException(String message) {
+        super(message);
     }
 }

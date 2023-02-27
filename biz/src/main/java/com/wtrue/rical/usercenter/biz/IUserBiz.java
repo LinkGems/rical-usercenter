@@ -13,4 +13,6 @@ public interface IUserBiz {
     UserDetailDTO queryUserDetailById(Long userId);
 
     Long addUserDetail(UserDetailDTO user);
+
+    String register(UserDetailDTO userDetailDTO);
 }

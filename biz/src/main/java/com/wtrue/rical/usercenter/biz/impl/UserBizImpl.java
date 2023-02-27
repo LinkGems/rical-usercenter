@@ -10,6 +10,7 @@ import com.wtrue.rical.usercenter.domain.dto.UserDetailDTO;
 import com.wtrue.rical.usercenter.domain.enums.BusinessErrorEnum;
 import com.wtrue.rical.usercenter.domain.exception.BusinessException;
 import com.wtrue.rical.usercenter.service.IUserDetailService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ObjectUtils;
@@ -24,6 +25,9 @@ import javax.annotation.Resource;
 @Service
 public class UserBizImpl implements IUserBiz {
 
+    @Value("${rsa.private.key}")
+    private String privateKey;
+
     @Resource
     private IUserDetailService userDetailService;
 
@@ -32,9 +36,10 @@ public class UserBizImpl implements IUserBiz {
         return userDetailService.queryUserDetailByUserId(userId);
     }
 
+    @Override
     public String register(UserDetailDTO userDetailDTO){
         Long userId = addUserDetail(userDetailDTO);
-        return TokenUtil.generateToken(userId);
+        return new TokenUtil().generateToken(userId);
     }
 
     @Transactional
@@ -46,7 +51,7 @@ public class UserBizImpl implements IUserBiz {
         String password = userDetailDTO.getPassword();
         String rawPassword;
         try{
-            rawPassword = RSAUtil.decrypt(password);
+            rawPassword = RSAUtil.decrypt(privateKey, password);
         }catch (Exception e){
             throw new BusinessException(BusinessErrorEnum.PASSWORD_ERROR, "密码解密失败！");
         }

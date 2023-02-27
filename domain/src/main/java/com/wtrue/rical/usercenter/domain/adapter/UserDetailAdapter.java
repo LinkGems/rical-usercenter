@@ -2,6 +2,7 @@ package com.wtrue.rical.usercenter.domain.adapter;
 
 import com.wtrue.rical.usercenter.domain.dto.UserDetailDTO;
 import com.wtrue.rical.usercenter.domain.po.UserDetailPO;
+import com.wtrue.rical.usercenter.domain.request.UserRegisterReq;
 import com.wtrue.rical.usercenter.export.pojo.UserDetailModel;
 
 /**
@@ -58,5 +59,19 @@ public class UserDetailAdapter {
         userDetailModel.setWeixinId(dto.getWeixinId());
         userDetailModel.setAliId(dto.getAliId());
         return userDetailModel;
+    }
+
+    public static UserDetailDTO registerReq2dto(UserRegisterReq req) {
+        if (req == null) {
+            return null;
+        }
+        UserDetailDTO userDetailDTO = new UserDetailDTO();
+        userDetailDTO.setUserName(req.getUserName());
+        userDetailDTO.setPassword(req.getPassword());
+        userDetailDTO.setMobile(req.getMobile());
+        userDetailDTO.setEmail(req.getEmail());
+        userDetailDTO.setWeixinId(req.getWeixinId());
+        userDetailDTO.setAliId(req.getAliId());
+        return userDetailDTO;
     }
 }
